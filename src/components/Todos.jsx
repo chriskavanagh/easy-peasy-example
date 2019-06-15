@@ -1,9 +1,15 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import TodoItem from "./TodoItem";
-import { useStore } from "easy-peasy";
+import { useStore, useActions } from "easy-peasy";
 
 const Todos = () => {
   const todos = useStore(state => state.todos);
+  const fetchTodos = useActions(actions => actions.fetchTodos);
+
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+
   return (
     <Fragment>
       <h1>Todos</h1>

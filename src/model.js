@@ -1,25 +1,20 @@
 import { action, thunk } from "easy-peasy";
+import axios from "axios";
 import uuid from "uuid";
 
 export default {
-  todos: [
-    {
-      id: 1,
-      title: "Take Out Trash",
-      completed: true
-    },
-    {
-      id: 2,
-      title: "Pick Up Kids",
-      completed: false
-    },
-    {
-      id: 3,
-      title: "Dinner With Boss",
-      completed: false
-    }
-  ],
+  todos: [],
+  // Thunk
+  fetchTodos: thunk(async actions => {
+    const { data: todos } = await axios.get(
+      "https://jsonplaceholder.typicode.com/todos?_limit=5"
+    );
+    actions.setTodos(todos);
+  }),
   // Actions
+  setTodos: action((state, todos) => {
+    state.todos = todos;
+  }),
   add: action((state, todo) => {
     todo.id = uuid.v4();
     todo.completed = false;
