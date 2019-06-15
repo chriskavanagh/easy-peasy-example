@@ -6,6 +6,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 const TodoItem = ({ todo }) => {
   const toggle = useActions(actions => actions.toggle);
   const remove = useActions(actions => actions.remove);
+
   return (
     <div
       className="todo"

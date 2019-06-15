@@ -4,8 +4,17 @@ import "./index.css";
 import App from "./App";
 //import "fontawesome";
 import * as serviceWorker from "./serviceWorker";
+import model from "./model";
+import { StoreProvider, createStore } from "easy-peasy";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const store = createStore(model);
+
+ReactDOM.render(
+  <StoreProvider store={store}>
+    <App />
+  </StoreProvider>,
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
