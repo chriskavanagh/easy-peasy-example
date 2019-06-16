@@ -27,6 +27,21 @@ body {
   justify-content: space-between;
 }
 
+.postItem {
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+}
+
+.postItem button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .todo button {
   background: none;
   border: none;

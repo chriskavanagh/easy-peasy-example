@@ -7,13 +7,13 @@ export default {
     },
     {
       id: 2,
-      title: "First Post",
-      body: "This is the body of Post 1"
+      title: "Second Post",
+      body: "This is the body of Post 2"
     },
     {
       id: 3,
-      title: "First Post",
-      body: "This is the body of Post 1"
+      title: "Third Post",
+      body: "This is the body of Post 3"
     }
   ]
 };
