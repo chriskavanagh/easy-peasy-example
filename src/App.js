@@ -1,5 +1,5 @@
 import React from "react";
-import { StoreProvider, createStore } from "easy-peasy";
+//import { StoreProvider, createStore } from "easy-peasy";
 import Todos from "./components/Todos";
 import AddTodo from "./components/AddTodo";
 //import model from "./model";

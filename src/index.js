@@ -5,9 +5,16 @@ import App from "./App";
 //import "fontawesome";
 import * as serviceWorker from "./serviceWorker";
 import model from "./model";
+import postsModel from "./postsModel";
 import { StoreProvider, createStore } from "easy-peasy";
 
-const store = createStore(model);
+const root = {
+  model,
+  postsModel
+};
+
+//export default () => createStore(root);
+const store = createStore(root);
 
 ReactDOM.render(
   <StoreProvider store={store}>

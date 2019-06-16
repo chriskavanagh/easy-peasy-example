@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const TodoItem = ({ todo }) => {
-  const toggle = useActions(actions => actions.toggle);
-  const remove = useActions(actions => actions.remove);
+  const toggle = useActions(actions => actions.model.toggle);
+  const remove = useActions(actions => actions.model.remove);
 
   return (
     <div

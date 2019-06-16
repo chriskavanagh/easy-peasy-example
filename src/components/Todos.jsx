@@ -3,8 +3,8 @@ import TodoItem from "./TodoItem";
 import { useStore, useActions } from "easy-peasy";
 
 const Todos = () => {
-  const todos = useStore(state => state.todos);
-  const fetchTodos = useActions(actions => actions.fetchTodos);
+  const todos = useStore(state => state.model.todos);
+  const fetchTodos = useActions(actions => actions.model.fetchTodos);
 
   useEffect(() => {
     fetchTodos();
