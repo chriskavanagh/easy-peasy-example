@@ -4,6 +4,7 @@ import uuid from "uuid";
 
 export default {
   todos: [],
+  title: "Easy-Peasy Tutorial",
   // thunk
   fetchTodos: thunk(async actions => {
     const { data: todos } = await axios.get(
