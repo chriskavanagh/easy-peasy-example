@@ -13,6 +13,7 @@ const AddTodo = () => {
           add({
             title
           });
+          setTitle("");
         }}
       >
         <input
