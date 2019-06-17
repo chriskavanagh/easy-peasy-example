@@ -3,7 +3,7 @@ import { useActions } from "easy-peasy";
 
 const AddTodo = () => {
   const [title, setTitle] = useState("");
-  const add = useActions(actions => actions.add);
+  const add = useActions(actions => actions.model.add);
 
   return (
     <div>

@@ -4,7 +4,7 @@ import uuid from "uuid";
 
 export default {
   todos: [],
-  // Thunk
+  // thunk
   fetchTodos: thunk(async actions => {
     const { data: todos } = await axios.get(
       "https://jsonplaceholder.typicode.com/todos?_limit=5"
